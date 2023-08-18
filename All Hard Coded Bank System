@@ -1,0 +1,64 @@
+print('Thankyou For Choosing BANKPROV. ')
+print('...')
+print('..')
+print('.')
+print('Insert Card')
+print('...')
+print('..')
+print('.')
+input('Insert Card --> "#" Below ')
+
+resp = input()
+if "#" in resp:
+    print('PROCESSING CARD INFORMATION')
+    print('............................')
+    input('Would You Like To Check Account Balance? yes or no ')
+    resp = input()
+    if "no" in resp:
+        exit(print("Thankyou For Choosing BANKPROV. "))
+    else:
+
+        input("checkings or savings ")
+        resp = input()
+        if "savings" in resp:
+            exit(print('Your Savings Balance is $-77,000, You Owe BANKPROV. 77,000 Dollars'))
+        else:
+            print("$80,439")
+            print("...")
+            print("..")
+            print(".")
+            input("deposit or withdrawal ")
+            resp = input()
+
+            if "deposit" in resp:
+                resp = input("How Much Cash Do You Have To Deposit Into Your Account? ")
+                cash = int(resp)
+                sum = (float(cash)) + (float(80,439))
+                print("Your New Account Balance is ", sum)
+                print('...')
+                print('..')
+                print('.')
+                print("Thankyou for Using BANKPROV. ATM Where We Make YOU Smile...")
+
+            if "withdrawal" in resp:
+                title = "what type of grouping would you prefer your cash in? 10's, 20's, 50's or 100's? "
+                resp = input(title.replace("what type of grouping would you prefer your cash in? 10's, 20's, 50's or 100's? ",
+                                    "What Type of Grouping Would You Prefer Your Cash In? 10's, 20's, 50's or 100's? "))
+                group = int(resp)
+
+
+
+                resp = input("How much would you like to withdrawal?... ")
+                amount = int(resp)
+
+
+
+
+
+                def division(input_amount, grouping):
+                    return input_amount // grouping
+                num_groupings = division(amount, group)
+                remaining_amount = amount - (num_groupings * group)
+                print("At BANKPROV. ATM We make YOU Smile...")
+                print("We have successfully dispensed $", amount)
+                print('Please Take Your', num_groupings, "x", group, "'s and", remaining_amount, "leftover.")
